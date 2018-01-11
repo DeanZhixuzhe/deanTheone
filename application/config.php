@@ -17,9 +17,9 @@ return [
     // 应用命名空间
     'app_namespace'          => 'app',
     // 应用调试模式
-    'app_debug'              => false,
+    'app_debug'              => true,
     // 应用Trace
-    'app_trace'              => false,
+    'app_trace'              => true,
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -43,13 +43,13 @@ return [
     // 是否开启多语言
     'lang_switch_on'         => false,
     // 默认全局过滤方法 用逗号分隔多个
-    'default_filter'         => '',
+    'default_filter'         => 'htmlentities',
     // 默认语言
     'default_lang'           => 'zh-cn',
     // 应用类库后缀
     'class_suffix'           => false,
     // 控制器类后缀
-    'controller_suffix'      => false,
+    'controller_suffix'      => true,
 
     // +----------------------------------------------------------------------
     // | 模块设置
@@ -97,7 +97,7 @@ return [
     // 是否强制使用路由
     'url_route_must'         => false,
     // 域名部署
-    'url_domain_deploy'      => false,
+    'url_domain_deploy'      => true,
     // 域名根，如thinkphp.cn
     'url_domain_root'        => '',
     // 是否自动转换URL中的控制器和操作名
@@ -129,7 +129,7 @@ return [
         // 模板后缀
         'view_suffix'  => 'html',
         // 模板文件名分隔符
-        'view_depr'    => DS,
+        'view_depr'    => '_',
         // 模板引擎普通标签开始标记
         'tpl_begin'    => '{',
         // 模板引擎普通标签结束标记
