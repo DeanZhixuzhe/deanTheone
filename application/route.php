@@ -8,14 +8,19 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
+use think\Route;
+Route::miss('/theme/tot/404.html','get');
+Route::get('/','index/index/index');
 
-return [
-    '__pattern__' => [
-        'name' => '\w+',
-    ],
-    '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
-    ],
+Route::pattern(['id' => '[0-9]+','area' => '[a-z]+','tags' => '[a-z]+','column' => '[a-z]+',]);
+// Route::get('tags/:tags$','index/Content/listtags');
+Route::get('admin','admin/Index/index');
+// Route::get();
 
-];
+// Route::get(':column$','index/Content/columnone');
+// Route::get(':column/:column$','index/Content/columntwo');
+// Route::get(':column/:column/:column$','index/Content/columntwosan');
+// Route::get(':category/:id$','index/Content/article');	//内容地址
+// Route::rule(':dir','index/List/index?type=list','get',['param_depr' => '','ext' => 'html|']);
+
+// Route::get('');
