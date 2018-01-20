@@ -82,7 +82,7 @@ class BaseController extends Controller
 	 * [处理无限级分类层级关系函数]
 	 * @author deanyan 2017-10-08T07:07:54+0800
 	 * @copyright www.deanyan.com
-	 * @param     array          $arr     需要处理的数组
+	 * @param     array           $arr     需要处理的数组
 	 * @param     string          $mObj    模型对象名，必须为小写
 	 * @param     string          $name    初始条件，一般为分类名称，为空默认顶级
 	 * @param     integer         $showtop 是否显示顶级分类名称，默认值0代表不显示

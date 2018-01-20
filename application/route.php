@@ -9,18 +9,22 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 use think\Route;
-Route::miss('/theme/tot/404.html','get');
+
 Route::get('/','index/index/index');
-
-Route::pattern(['id' => '[0-9]+','area' => '[a-z]+','tags' => '[a-z]+','column' => '[a-z]+',]);
-// Route::get('tags/:tags$','index/Content/listtags');
+// Route::get('404','index/index/four',['ext' => 'html']);
+Route::pattern(['id' => '[0-9]+','page' => 'p[0-9]+','area' => '[a-z]+','tags' => '[A-Za-z0-9]+','dir1' => '[A-Za-z0-9]+','dir2' => '[A-Za-z0-9]+','dir3' => '[A-Za-z0-9]+']);
 Route::get('admin','admin/Index/index');
-// Route::get();
+Route::get('about/:dir','index/Index/sgpage',['ext' => 'html',]);
+Route::get('map','index/Index/sgpage');
+Route::get('sitemap','index/Index/sitemap',['ext' => 'xml',]);
 
-// Route::get(':column$','index/Content/columnone');
-// Route::get(':column/:column$','index/Content/columntwo');
-// Route::get(':column/:column/:column$','index/Content/columntwosan');
-// Route::get(':category/:id$','index/Content/article');	//内容地址
-// Route::rule(':dir','index/List/index?type=list','get',['param_depr' => '','ext' => 'html|']);
+Route::get(':dir/:id','index/index/index',['ext' => 'html']);
+Route::get(':dir1$','index/index/index',['ext' => '']);
+Route::get(':dir1/:page$','index/index/index',['ext' => 'html']);
+Route::get(':dir1/:dir2$','index/index/index',['ext' => '']);
+Route::get(':dir1/:dir2/:page$','index/index/index',['ext' => 'html']);
+Route::get(':dir1/:dir2/:dir3$','index/index/index',['ext' => '']);
+Route::get(':dir1/:dir2/:dir3/:page$','index/index/index',['ext' => 'html']);
 
-// Route::get('');
+
+// Route::miss('/theme/tot/404.html','get');

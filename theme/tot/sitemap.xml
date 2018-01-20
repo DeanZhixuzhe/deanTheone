@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset>
+<url>
+	<loc>http://www.1314theone.com/</loc>
+
+	<changefreq>daily</changefreq>
+	<priority>1.0</priority>
+</url>
+{volist name="$data.arctype" id="vo"}
+<url>
+  <loc>http://www.1314theone.com{$vo.typeurl}</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+{/volist}
+{volist name="$data.areatype" id="vo"}
+<url>
+  <loc>http://www.1314theone.com{$vo.typeurl}</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+{/volist}
+{volist name="$data.list.t1" id="v"}
+{volist name="v" id="vo"}
+<url>
+  <loc>http://www.1314theone.com{$vo.arctype.arcurl}</loc>
+  <lastmod>{$vo.pubdate}</lastmod>
+  <priority>0.6</priority>
+</url>
+{/volist}
+{/volist}
+</urlset>

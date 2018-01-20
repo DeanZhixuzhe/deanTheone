@@ -1,0 +1,23 @@
+1.0.0
+2018-01-11
+采用ThinkPHP5.0.11框架搭建系统，复制theone织梦服务器的模板文件到theme目录下
+
+1.0.1
+2018-01-20
+正式上线至新服务器，此版本调用织梦数据源，不包含增删改
+增加VersionUpdating说明文件
+一.应用application
+	1.更新应用配置文件，增加本地和织梦虚拟服务器数据库连接配置
+	2.更新应用路由
+二.模块
+	1.增加dedecms模块，连接织梦服务器读取相应数据
+	2.index模块
+		1.更新config配置文件相应的网站配置
+		2.删除controller除了Base、Index以外的控制器
+		3.更新BaseController引用model层为dedecms，并更新相应的依赖注入方法
+		4.更新IndexController相对应的页面访问处理
+三.主题theme
+	1.更新tot主题全部模板文件后缀为.php
+	2.更新模板文件所以标签为ThinkPHP自带标签展示数据
+	3.修正部分移动端模板BUG
+	
