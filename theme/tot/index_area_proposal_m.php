@@ -145,6 +145,7 @@
             </ul>
             <div class="am-tabs-bd">
                 <ul id="gl1" class="am-tab-panel am-fade am-in am-active">
+                {if condition="isset($data.list.t1.16)"}
                 {volist name="$data.list.t1.16" id="vo"}{lt name="$i" value="6"}
                     <li>
                         <a class="news" href="{$vo.arctype.arcurl}">
@@ -162,7 +163,7 @@
                             </div>
                         </a>
                     </li>
-                {/lt}{/volist}
+                {/lt}{/volist}{/if}
                     <div id="more">
                         <a href="/proposal/plan/">
                             <span>更多求婚策划</span>
@@ -170,7 +171,7 @@
                         </a>
                     </div>
                 </ul>
-                <ul id="gl2" class="am-tab-panel am-fade">
+                <ul id="gl2" class="am-tab-panel am-fade">{if condition="isset($data.list.t1.40)"}
                 {volist name="$data.list.t1.40" id="vo"}{lt name="$i" value="6"}
                     <li>
                         <a class="news" href="{$vo.arctype.arcurl}">
@@ -188,7 +189,7 @@
                             </div>
                         </a>
                     </li>
-                {/lt}{/volist}
+                {/lt}{/volist}{/if}
                     <div id="more">
                         <a href="/proposal/kuaishan/">
                             <span>更多快闪求婚</span>
@@ -196,7 +197,7 @@
                         </a>
                     </div>
                 </ul>
-                <ul id="gl3" class="am-tab-panel am-fade">
+                <ul id="gl3" class="am-tab-panel am-fade">{if condition="isset($data.list.t1.26)"}
                 {volist name="$data.list.t1.26" id="vo"}{lt name="$i" value="6"}
                     <li>
                         <a class="news" href="{$vo.arctype.arcurl}">
@@ -214,7 +215,7 @@
                             </div>
                         </a>
                     </li>
-                {/lt}{/volist}
+                {/lt}{/volist}{/if}
                     <div id="more">
                         <a href="/proposal/dianyingyuan/">
                             <span>更多电影院求婚</span>
@@ -222,7 +223,7 @@
                         </a>
                     </div>
                 </ul>
-                <ul id="gl4" class="am-tab-panel am-fade">
+                <ul id="gl4" class="am-tab-panel am-fade">{if condition="isset($data.list.t1.17)"}
                 {volist name="$data.list.t1.17" id="vo"}{lt name="$i" value="6"}
                     <li>
                         <a class="news" href="{$vo.arctype.arcurl}">
@@ -240,7 +241,7 @@
                             </div>
                         </a>
                     </li>
-                {/lt}{/volist}
+                {/lt}{/volist}{/if}
                     <div id="more">
                         <a href="/proposal/originality/">
                             <span>更多求婚创意</span>
@@ -248,7 +249,7 @@
                         </a>
                     </div>
                 </ul>
-                <ul id="gl5" class="am-tab-panel am-fade">
+                <ul id="gl5" class="am-tab-panel am-fade">{if condition="isset($data.list.t1.18)"}
                 {volist name="$data.list.t1.18" id="vo"}{lt name="$i" value="6"}
                     <li>
                         <a class="news" href="{$vo.arctype.arcurl}">
@@ -266,7 +267,7 @@
                             </div>
                         </a>
                     </li>
-                {/lt}{/volist}
+                {/lt}{/volist}{/if}
                     <div id="more">
                         <a href="/proposal/mode/">
                             <span>更多求婚方式</span>
@@ -274,7 +275,7 @@
                         </a>
                     </div>
                 </ul>
-                <ul id="gl6" class="am-tab-panel am-fade">
+                <ul id="gl6" class="am-tab-panel am-fade">{if condition="isset($data.list.t1.19)"}
                 {volist name="$data.list.t1.19" id="vo"}{lt name="$i" value="6"}
                     <li>
                         <a class="news" href="{$vo.arctype.arcurl}">
@@ -292,7 +293,7 @@
                             </div>
                         </a>
                     </li>
-                {/lt}{/volist}
+                {/lt}{/volist}{/if}
                     <div id="more">
                         <a href="/proposal/song/">
                             <span>更多求婚歌曲</span>
@@ -304,47 +305,7 @@
         </div>
     </div>
 </div>
-
-<!--footer-->
-<div id="footer">
-    <div class="first">
-        <ul class="am-avg-sm-2">
-            <li class="active">
-                <a href="/">
-                    <!-- <img src="__STATIC__/{$Think.config.website.view_style}m/images/icon-footer01-a.png"/> -->
-                    <p>首页</p>
-                </a>
-            </li>
-            <li>
-                <a href="trip_list.html">
-                    <!-- <img alt="" src="__STATIC__/{$Think.config.website.view_style}m/images/icon-footer2-a.png"/> -->
-                    <p>孟津旅游</p>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="beautiful">
-        <a title=""  href="beautiful_list.html">
-            <!-- <img alt="" src="__STATIC__/{$Think.config.website.view_style}m/images/icon-footer3-a.png"/> -->
-        </a>
-    </div>
-    <div class="last">
-        <ul class="am-avg-sm-2">
-            <li >
-                <a title="" href="specialty_mall.html">
-                    <!-- <img alt="" src="__STATIC__/{$Think.config.website.view_style}m/images/icon-footer4-a.png"/> -->
-                    <p>特产商城</p>
-                </a>
-            </li>
-            <li>
-                <a title="" href="user_center.html">
-                    <!-- <img alt="" src="__STATIC__/{$Think.config.website.view_style}m/images/icon-footer5-a.png"/> -->
-                    <p>我的</p>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
+{include file="./theme/tot/footer_m.php"}
 <script>
     $(function () {
         $('.am-slider').flexslider({

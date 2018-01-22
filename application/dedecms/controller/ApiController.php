@@ -269,7 +269,10 @@ class ApiController extends BaseController
 			return false;
 		}
 		$ctype = $this->channeltype->field('nid')->find($archives['channel']);	//获取模型名称
-		$addon = $this->$ctype['nid']->find($id);	//根据模型名称获取对应附加表内容
+		$addon = $this->$ctype['nid']->find($id)->toArray();	//根据模型名称获取对应附加表内容
+		foreach ($addon as &$value) {	//替换内容中的图片地址为七牛云地址
+			$value = preg_replace("/(<img.+src=\")(.+\..+)(\".+>)/i","\${1}http://img1.1314theone.com\${2}/picture1\${3}",$value);
+		}
 		$result = $this->arctypeConvert($archives);
 		if($archives['channel'] == 1){
 			$result['body'] = $this->replaceKeyword($addon['body']);
@@ -279,9 +282,13 @@ class ApiController extends BaseController
 		$arclist = $this->getArticleClassify($this->getTypeidList($result['arctype']['topid'],0,0)['typeids'],0,$this->getRelated($result['title']));
 		$result['position'] = $result['typelist']['position'];
 		$result['list'] = $arclist;
+		$result['fakecomment'] = ($result['typeid'] == 22) ? $this->getFakecomment($result['id']) : null;
 		return $result;
 	}
 	
+	public function getFakecomment($shopid){
+		return $this->fakecomment->where('shopid',$shopid)->limit(15)->select();
+	}
 	public function getFakefeedback($title='',$limit=5){
 		$title = '%'.$title.'%';
 		$data = $this->fakefeedback
@@ -598,6 +605,9 @@ class ApiController extends BaseController
 		for ($i=1; $i < $data['last_page']+1; $i++) {
 			if ($data['current_page'] == $i) {
 				$munPage .= '<li class="thisclass">'.$i.'</li>';
+				if ($i == 2) {
+					$prePage = '<li><a href="'.$data['url'].'">上一页</a></li>';
+				}
 			}else{
 				if ($i == 1) {
 					$munPage .= '<li><a href="'.$data['url'].'">'.$i.'</a></li>';

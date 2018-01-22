@@ -52,12 +52,12 @@
 		</div>
 		<div class="pt015">
 			<span class="module_t_c">最新求婚攻略</span>
-			<ul class="colums1">{volist name="$data.list.nt1.16" id="vo" offset="0" length='2'}
-				<li><a href="{$vo.arctype.arcurl}" target="_blank">{$vo.title}</a></li>{/volist}{volist name="$data.list.nt1.17" id="vo" offset="0" length='2'}
-				<li><a href="{$vo.arctype.arcurl}" target="_blank">{$vo.title}</a></li>{/volist}{volist name="$data.list.nt1.18" id="vo" offset="0" length='2'}
-				<li><a href="{$vo.arctype.arcurl}" target="_blank">{$vo.title}</a></li>{/volist}{volist name="$data.list.nt1.19" id="vo" offset="0" length='2'}
-				<li><a href="{$vo.arctype.arcurl}" target="_blank">{$vo.title}</a></li>{/volist}{volist name="$data.list.nt1.20" id="vo" offset="0" length='2'}
-				<li><a href="{$vo.arctype.arcurl}" target="_blank">{$vo.title}</a></li>{/volist}
+			<ul class="colums1">{if condition="isset($data.list.nt1.16)"}{volist name="$data.list.nt1.16" id="vo" offset="0" length='2'}
+				<li><a href="{$vo.arctype.arcurl}" target="_blank">{$vo.title}</a></li>{/volist}{/if}{if condition="isset($data.list.nt1.17)"}{volist name="$data.list.nt1.17" id="vo" offset="0" length='2'}
+				<li><a href="{$vo.arctype.arcurl}" target="_blank">{$vo.title}</a></li>{/volist}{/if}{if condition="isset($data.list.nt1.18)"}{volist name="$data.list.nt1.18" id="vo" offset="0" length='2'}
+				<li><a href="{$vo.arctype.arcurl}" target="_blank">{$vo.title}</a></li>{/volist}{/if}{if condition="isset($data.list.nt1.19)"}{volist name="$data.list.nt1.19" id="vo" offset="0" length='2'}
+				<li><a href="{$vo.arctype.arcurl}" target="_blank">{$vo.title}</a></li>{/volist}{/if}{if condition="isset($data.list.nt1.20)"}{volist name="$data.list.nt1.20" id="vo" offset="0" length='2'}
+				<li><a href="{$vo.arctype.arcurl}" target="_blank">{$vo.title}</a></li>{/volist}{/if}
 			</ul>
 		</div>
 	</div>

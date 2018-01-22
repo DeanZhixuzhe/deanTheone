@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>TheOne求婚策划_浪漫求婚_快闪求婚_电影院求婚 - {global.cfg_webname/}</title>
+<title>TheOne求婚策划_浪漫求婚_快闪求婚_电影院求婚 - {$cfg.webname}</title>
 <meta name="keywords" content="求婚策划,浪漫求婚,求婚策划公司,快闪求婚,电影院求婚" />
 <meta name="description" content="TheOne求婚策划公司为您提供专业的求婚策划服务，专注于浪漫求婚、快闪求婚、电影院求婚、餐厅咖啡厅求婚等多种求婚方式，还有求婚策划价格咨询、求婚策划地点推荐等专业服务。" />
 <link rel="canonical" href="http://www.1314theone.com/">
@@ -11,7 +11,7 @@
 <body>
 {include file="./theme/tot/header.php"/}
 <div class="banner">
-	<video autoplay="true" loop="true" ><source src="http://img1.1314theone.com/TheOne01.mp4" type="video/mp4"></video>
+	<video autoplay="true" loop="true" ><source src="/upload/video/TheOne01.mp4" type="video/mp4"></video>
 	<div class="info">
 		<p>为她呈现你独一无二的爱</p>
 		<span>专业定制求婚策划</span>

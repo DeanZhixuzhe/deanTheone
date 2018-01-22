@@ -16,8 +16,7 @@
 		<div class="about_map">
 		  <h2><a href="{$cfg.domain}/">The One求婚策划首页</a></h2>
 		  <ul><h3>求婚策划知识</h3>
-			<li><a href="{$cfg.domain}/case/proposal/">求婚案例</a></li>
-			<li><a href="{$cfg.domain}/video/proposal/">求婚视频</a></li>
+			<li><a href="{$cfg.domain}/proposal/case/">求婚案例</a></li>
 			<li><a href="{$cfg.domain}/proposal/originality/">求婚创意</a></li>
 			<li><a href="{$cfg.domain}/proposal/plan/">求婚策划</a></li>
 			<li><a href="{$cfg.domain}/proposal/mode/">求婚方式</a></li>

@@ -13,7 +13,7 @@
 <body>
 {include file="./theme/tot/header.php"}
 <div class="banner">
-	<video autoplay="true" loop="true" ><source src="http://web-1314theone.oss-cn-beijing.aliyuncs.com/TheOne01.mp4" type="video/mp4"></video>
+	<video autoplay="true" loop="true" ><source src="http://img1.1314theone.com/TheOne01.mp4" type="video/mp4"></video>
 	<div class="info">
 		<p>为她呈现你独一无二的爱</p>
 		<span>专业定制求婚策划</span>

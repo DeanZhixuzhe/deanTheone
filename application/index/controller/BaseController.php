@@ -26,14 +26,14 @@ class BaseController extends Controller
     function __construct(){
         parent::__construct();
         $this->template = Config::get('template.path').Config::get('template.style').DS;
-        $this->domain = 'http://theone.me';
+        $this->domain = 'http://www.1314theone.com';
         
     }
 
     public function _initialize(){
         $cfg['webname'] = 'TheOne浪漫策划公司';
         $cfg['template'] = Config::get('template.path').Config::get('template.style').'/';
-        $cfg['domain'] = 'http://theone.me';
+        $cfg['domain'] = 'http://www.1314theone.com';
         
         $this->assign('cfg',$cfg);
         // dump($this->request->header());

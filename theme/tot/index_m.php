@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>TheOne求婚策划_浪漫求婚_快闪求婚_电影院求婚 - {dede:global.cfg_webname/}</title>
+<title>TheOne求婚策划_浪漫求婚_快闪求婚_电影院求婚 - {$cfg.webname}</title>
 <meta name="keywords" content="求婚策划,浪漫求婚,求婚策划公司,快闪求婚,电影院求婚" />
 <meta name="description" content="TheOne求婚策划公司为您提供专业的求婚策划服务，专注于浪漫求婚、快闪求婚、电影院求婚、餐厅咖啡厅求婚等多种求婚方式，还有求婚策划价格咨询、求婚策划地点推荐等专业服务。" />
 {include file="./theme/tot/meta_m.php"}
@@ -39,8 +39,9 @@
         </div>
     </div>
     <!--轮播banner-->
-    <div id="index_banner">
-        <video autoplay="true" loop="true" ><source src="http://img1.1314theone.com/TheOne01.mp4" type="video/mp4"></video>
+    <div class="banner">
+        <!-- <embed src="/upload/video/TheOne01.mp4" loop="true" autostart="true" controls="console"></embed> -->
+        <video autoplay="true" poster="/upload/image/TheOne01.mp4_20180122_154722.843.jpg" loop="true" preload="metadata"><source src="http://img1.1314theone.com/TheOne01.mp4" type="video/mp4"></video>
     </div>
     <!--栏目-->
     <div class="order_nav">

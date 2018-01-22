@@ -37,11 +37,11 @@
 	<div class="body_r">
 		<div class="pt015">
 			<span class="module_t_c bbn">相关栏目</span>
-			<ul class="related_colums">{volist name="$data.typelist.same.1" id="vo"}
+			<ul class="related_colums">{if condition="isset($data.typelist.same.1)"}{volist name="$data.typelist.same.1" id="vo"}
 				<li><a href="{$vo.typeurl}">{$vo.typename}</a></li>
-				{/volist}{volist name="$data.typelist.same.2" id="vo"}
+				{/volist}{/if}{if condition="isset($data.typelist.same.2)"}{volist name="$data.typelist.same.2" id="vo"}
 				<li><a href="{$vo.typeurl}">{$vo.typename}</a></li>
-				{/volist}
+				{/volist}{/if}
 				<div class="cl"></div>
 			</ul>
 		</div>

@@ -1,7 +1,3 @@
-<?php
-use app\dedecms\controller\ApiController;
-$obj = new ApiController;
-?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -12,11 +8,11 @@ $obj = new ApiController;
 {include file="./theme/tot/meta.php"}
 </head>
 <body>
-{{include file="./theme/tot/header.php"}
+{include file="./theme/tot/header.php"}
 <div class="body">
-	<div class="breadcrumb">{dede:field name='position'}</div>
+	<div class="breadcrumb"><a href="/">首页</a> > {$data.position}</div>
 	<div class="as_head">
-	<form action="http://static.theone.me/romantic/cashier/cashier.php?terminal=pc" class="payform" method="post" target="_blank" name="payment" id="payment">
+	<form action="http://static.1314theone.com/romantic/cashier/cashier.php?terminal=pc" class="payform" method="post" target="_blank" name="payment" id="payment">
 		<div class="le"><img src="http://img1.1314theone.com{$data.litpic}"></div>
 		<div class="ri">
 			<h1>{$data.title}</h1>
@@ -153,12 +149,8 @@ $obj = new ApiController;
 			<div class="as_title"><span>疑问解答</span></div>
 			<div class="as_title"><span>客户评价</span></div>
 			<div class="shoppl">
-          		<ul>
-          		
-          				$con .= '<li><div class="pltx"><img src="' . $value['litpic'] . '"><p>' . $value['title'] . '</p></div><div class="plxq"><span><img src="/images/shop/star.png"><em>策划：好</em><em>创意：好</em><em>布置：好</em><em>服务：好</em><em>拍摄：好</em></span>' . $value['body'] . '</div></li>';
-          			}
-          		
-        
+          		<ul>{volist name="$data.fakecomment" id="vo"}
+          			<li><div class="pltx"><img src="http://img1.1314theone.com{$vo.litpic}"><p>{$vo.title}</p></div><div class="plxq"><span><img src="/images/shop/star.png"><em>策划：好</em><em>创意：好</em><em>布置：好</em><em>服务：好</em><em>拍摄：好</em></span>{$vo.body}</div></li>{/volist}
           		</ul>
         	</div>
 		</div>
@@ -166,14 +158,13 @@ $obj = new ApiController;
 	<div class="body_r">
 		<div class="pt015">
 			<span class="module_t_c">推荐套餐</span>
-			<ul class="piczy_price">{dede:arclist limit='0,8' channelid='6' addfields='trueprice,truepricemax' typeid='22'}
-				<li><div class="piczy_p_l"><a href="[field:arcurl/]" target="_blank" rel="nofollow"><img src="http://img1.1314theone.com[field:litpic/]" title="[field:title/]"></a></div><div class="piczy_p_r"><a href="[field:arcurl/]" target="_blank" rel="nofollow">[field:title/]</a><p>¥[field:trueprice/][field:truepricemax runphp="yes"]if(empty(@me)){@me="";}else{@me=" - ".@me;}[/field:truepricemax]</p></div></li>
-				{/dede:arclist}
+			<ul class="piczy_price">{volist name="$data.mallList" id="vo" offset="0" length="4"}
+				<li><div class="piczy_p_l"><a href="{$vo.arctype.arcurl}" target="_blank" rel="nofollow"><img src="http://img1.1314theone.com{$vo.litpic}" title="{$vo.title}"></a></div><div class="piczy_p_r"><a href="{$vo.arctype.arcurl}" target="_blank" rel="nofollow">{$vo.title}</a><p>￥{$vo.shop.trueprice}</p></div></li>{/volist}
 			</ul>
 		</div>
 	</div>
 	<div class="cl"></div>
 </div>
-{{include file="./theme/tot/footer.php"}
+{include file="./theme/tot/footer.php"}
 </body>
 </html>

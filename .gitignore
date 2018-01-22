@@ -4,3 +4,4 @@ composer.lock
 upload
 tests
 runtime
+sftp-config.json

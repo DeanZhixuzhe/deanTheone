@@ -11,7 +11,7 @@
 <body>
 {include file="./theme/tot/header.php"}
 <div class="body">
-	<div class="breadcrumb">{$data.position}</div>
+	<div class="breadcrumb"><a href="/">首页</a> > {$data.position}</div>
 	<div class="body_l">
 		<div class="content">
 			<h1>{$data.title}</h1>
@@ -40,7 +40,7 @@
 		<div class="pt015">
 			<span class="module_t_c">推荐套餐</span>
 			<ul class="piczy_price">{volist name="$data.mallList" id="vo" offset="0" length="4"}
-				<li><a href="{$vo.arctype.arcurl}" target="_blank" rel="nofollow"><img src="http://img1.1314theone.com{$vo.litpic}" title="{$vo.title}"><span>{$vo.title}</span></a><p>￥{$vo.shop.trueprice}</p></li>{/volist}
+				<li><div class="piczy_p_l"><a href="{$vo.arctype.arcurl}" target="_blank" rel="nofollow"><img src="http://img1.1314theone.com{$vo.litpic}" title="{$vo.title}"></a></div><div class="piczy_p_r"><a href="{$vo.arctype.arcurl}" target="_blank" rel="nofollow">{$vo.title}</a><p>￥{$vo.shop.trueprice}</p></div></li>{/volist}
 			</ul>
 		</div>
 	</div>
