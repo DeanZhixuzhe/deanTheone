@@ -79,11 +79,19 @@
 				</li>
 				<li><a href="tencent://message/?uin=3547038718&Site=qq&Menu=yes" target="_blank" rel="nofollow">定制浪漫</a>
 					<ul>
-						<li><p>全国浪漫热线：023-62752304</p><p>24小时值班热线：17353237074</p><p>微信客服：theonelangman</p><p><a href="tencent://message/?uin=3547038718&Site=qq&Menu=yes" target="_blank" rel="nofollow">QQ客服：3562419182</a></p></li>
+						<li><p>全国浪漫热线：023-62752304</p></li><li><p>24小时值班热线：17353237074</p></li><li><p>微信客服：theonelangman</p></li><li><p><a href="tencent://message/?uin=3547038718&Site=qq&Menu=yes" target="_blank" rel="nofollow">QQ客服：3562419182</a></p></li>
 					</ul>
 				</li>
-				<li><a href="/mall/" rel="nofollow">实惠套餐</a></li>
-				<li><a href="/proposal/case/" rel="nofollow">精品案例</a></li>
+				<li><a href="/mall/" rel="nofollow">实惠套餐</a>
+					<ul>
+						<li><p>全国浪漫热线：023-62752304</p></li><li><p>24小时值班热线：17353237074</p></li><li><p>微信客服：theonelangman</p></li><li><p><a href="tencent://message/?uin=3547038718&Site=qq&Menu=yes" target="_blank" rel="nofollow">QQ客服：3562419182</a></p></li>
+					</ul>
+				</li>
+				<li><a href="/proposal/case/" rel="nofollow">精品案例</a>
+					<ul>
+						<li><p>全国浪漫热线：023-62752304</p></li><li><p>24小时值班热线：17353237074</p></li><li><p>微信客服：theonelangman</p></li><li><p><a href="tencent://message/?uin=3547038718&Site=qq&Menu=yes" target="_blank" rel="nofollow">QQ客服：3562419182</a></p></li>
+					</ul>
+				</li>
 				<li class="child"><a href="/proposal/">求婚攻略</a>
 					<ul>
 						<li><a href="/proposal/plan/">求婚策划</a></li>

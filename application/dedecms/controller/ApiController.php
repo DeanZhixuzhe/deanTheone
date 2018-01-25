@@ -17,12 +17,6 @@ use think\Loader;
 */
 class ApiController extends BaseController
 {
-	public function getlujin(){
-		$controller = $this->request->controller();
-		echo "slkdjfklsjflk";
-		// return $controller;
-	}
-
 	public function getArctype($id='',$dir='',$typename='',$reid='',$topid='',$custom=''){
 		$result = null;
 		if (!empty($id)) {
@@ -233,13 +227,13 @@ class ApiController extends BaseController
 		if ($result == null || $result == false) {
 			return false;
 		}
-		if ($result['channeltype'] == -1 && $result['ispart'] == 1) {
+		if ($result['channeltype'] == -1 && $result['ispart'] == 1) {	//判断专题形式的频道页
 			$result['typelist'] = $this->getTypeidList($result['arctype']['id'],$result['arctype']['reid'],$result['arctype']['topid']);
 			$arclist = $this->getArticleClassify($result['typelist']['typeids'],0,$result['area'],1);
 			$result['fakefeedback'] = $this->getFakefeedback($result['typename']);
 			$result['position'] = $result['typelist']['position'];
 			$result['list'] = $arclist;
-		}elseif ($result['channeltype'] != -1 && $result['ispart'] == 1) {
+		}elseif ($result['channeltype'] != -1 && $result['ispart'] == 1) {	//判断非专题形式的频道页
 			$result['typelist'] = $this->getTypeidList($result['id'],$result['reid'],$result['topid']);
 			$arclist = $this->getArticleClassify($result['typelist']['typeids']);
 			$result['position'] = $result['typelist']['position'];
@@ -270,6 +264,7 @@ class ApiController extends BaseController
 		}
 		$ctype = $this->channeltype->field('nid')->find($archives['channel']);	//获取模型名称
 		$addon = $this->$ctype['nid']->find($id)->toArray();	//根据模型名称获取对应附加表内容
+		$archives['litpic'] = preg_replace("/(-lp|-L)/i","",$archives['litpic']);	//替换缩略图为正常图
 		foreach ($addon as &$value) {	//替换内容中的图片地址为七牛云地址
 			$value = preg_replace("/(<img.+src=\")(.+\..+)(\".+>)/i","\${1}http://img1.1314theone.com\${2}/picture1\${3}",$value);
 		}

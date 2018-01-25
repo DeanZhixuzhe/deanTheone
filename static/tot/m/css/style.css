@@ -507,10 +507,9 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 #news_detail .cover .collect{position: absolute; top:20px; right: 20px;}
 #news_detail .cover .collect img{width: 30px;}
 
-
 #news_detail .cover .title{position: absolute; bottom:0; left:0; width:100%; padding:10px; background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5)); background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0,0,0,0)), color-stop(1,rgba(0,0,0,0.5))); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0,0,0,0)', endColorstr='rgba(0,0,0,0.5)', GradientType='0');}
 #news_detail .cover .title span{color: white; font-size: 14px; float: left;}
-#news_detail .cover .title h1{color: white; font-size: 22px;}
+#news_detail .cover .title h1{color: white; font-size: 16px; overflow: hidden; white-space: nowrap;}
 #news_detail .cover .read{position: absolute; bottom: 15px; right: -10px; padding-right: 10px; width: 80px; display: block; background-color: rgba(0,0,0,0.5); -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; text-align: center;}
 #news_detail .cover .eye{width: 20px;}
 #news_detail .cover .read span{color: white;}

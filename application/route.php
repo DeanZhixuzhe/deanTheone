@@ -18,9 +18,9 @@ Route::get('m/:dir1/:dir2$','http://m.1314theone.com/:dir1/:dir2/');
 Route::get('m/:dir1/:dir2/:page$','http://m.1314theone.com/:dir1/:dir2/:page.html');
 Route::get('m/:dir1/:dir2/:dir3$','http://m.1314theone.com/:dir1/:dir2/:dir3/');
 Route::get('m/:dir1/:dir2/:dir3/:page$','http://m.1314theone.com/:dir1/:dir2/:dir3/:page.html');
+Route::get('case/:id$','http://www.1314theone.com/proposal/:id.html');
 
-
-Route::get('admin','admin/Index/index');
+// Route::get('admin','admin/Index/index');
 Route::get('about/:dir','index/Index/sgpage',['ext' => 'html',]);
 Route::get('map','index/Index/sgpage');
 Route::get('sitemap','index/Index/sitemap',['ext' => 'xml',]);

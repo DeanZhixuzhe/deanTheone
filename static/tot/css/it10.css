@@ -39,7 +39,7 @@ div,ul,li,p,dl,dt,dd,i,em,a,h1,h2,h3,h4,h5,h6,img{box-sizing: border-box;-moz-bo
 .header .nav li{float: left;}
 .header .nav ul li{}
 .header .nav ul li a{color: #666; line-height: 60px; padding: 0 10px; margin: 0 20px; text-align: center; font-size: 14px; opacity: .9; height: 60px; box-sizing: border-box;}
-.header .nav ul li ul{display: none; position: absolute; top: 60px; left: 230px; height: 40px; width: 730px; background: #fff}
+.header .nav ul li ul{display: none; position: absolute; top: 60px; left: 160px; height: 40px; width: 800px; background: #fff}
 .header .nav ul li ul li a{color: #666; line-height: 40px; padding: 0 10px; margin: 0 10px; text-align: center; font-size: 12px; opacity: .9; height: 40px; box-sizing: border-box;}
 .header .nav ul li ul li p{color: #666; line-height: 40px; padding: 0 10px; margin: 0 10px; text-align: center; font-size: 12px; opacity: .9; height: 40px; box-sizing: border-box;}
 
