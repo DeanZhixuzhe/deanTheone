@@ -27,7 +27,10 @@ class BaseController extends Controller
         parent::__construct();
         $this->template = Config::get('template.path').Config::get('template.style').DS;
         $this->domain = 'http://www.1314theone.com';
-        
+        if ($this->request->isMobile() && strpos($this->request->host(),'m.') === false) {
+            $mwebUrl = (strpos($this->request->url(true),'www.') !== false) ? str_replace('http://www.','http://m.',$this->request->url(true)) : str_replace('http://','http://m.',$this->request->url(true));
+            header('Location: '.$mwebUrl);exit();
+        }
     }
 
     public function _initialize(){

@@ -90,22 +90,22 @@
     	<div class="body crew">
     		<ul class="am-avg-sm-2">
     			<li>
-    				<img src="__STATIC/{$Think.config.template.style}/images/zyry3.png">
+    				<img src="__STATIC__/{$Think.config.template.style}/images/zyry3.png">
 	    			<span>专业浪漫策划师</span>
 	    			<p>专业浪漫策划师根据男女主角的爱情故事定制独一无二，专属的浪漫惊喜方案。精心定制个性化浪漫惊喜流程及细节，一对一提供相关服务咨询及建议。</p>
     			</li>
     			<li>
-	    			<img src="__STATIC/{$Think.config.template.style}/images/zyry4.png">
+	    			<img src="__STATIC__/{$Think.config.template.style}/images/zyry4.png">
 	    			<span>专业浪漫统筹师</span>
 	    			<p>专业浪漫统筹师负责浪漫惊喜活动前的彩排工作，提供浪漫惊喜现场的管家式服务，营造浪漫惊喜氛围。她不是主持，却胜似主持。通过她的服务让你们尽情享受浪漫和祝福！</p>
 	    		</li>
 	    		<li>
-	    			<img src="__STATIC/{$Think.config.template.style}/images/zyry1.png">
+	    			<img src="__STATIC__/{$Think.config.template.style}/images/zyry1.png">
 	    			<span>专业活动督导</span>
 	    			<p>为您提供现场指导意见，统筹协调音乐、灯光、道具、人员等；把控浪漫惊喜活动的各个环节，从大场景到小细节都不马虎；其他活动现场各种突发情况的灵活处理，维持浪漫活动现场秩序，保障活动的顺畅完美进行。</p>
 	    		</li>
 	    		<li>
-	    			<img src="__STATIC/{$Think.config.template.style}/images/zyry2.png">
+	    			<img src="__STATIC__/{$Think.config.template.style}/images/zyry2.png">
 	    			<span>专业AE执行</span>
 	    			<p>负责浪漫惊喜前场地的测量、考察、协调；根据浪漫现场实际情况做出个性化和专业化安排；物料的前期采购，个性化物品的制作设计及现场搬运，浪漫场景搭建，求婚后现场拆场等工作，做好活动的后勤保障工作。</p>
 	    		</li>
@@ -115,7 +115,7 @@
     <div class="m_shopcon">
     	<div class="title">服务流程</div>
     	<div class="body">
-    		<img src="__STATIC/{$Think.config.template.style}/m/images/ServiceProcess.png">
+    		<img src="__STATIC__/{$Think.config.template.style}/m/images/ServiceProcess.png">
     	</div>
     </div>
     <div class="m_shopcon">
@@ -230,11 +230,11 @@
 			<span>theonelangman</span>
 		</div>
         <ul class="am-g">
-        	<li class="am-u-sm-2"><a class="call" href="mqqwpa://im/chat?chat_type=wpa&uin=3547038718&version=1&src_type=web&web_src=1314theone.com" rel="nofollow"> <img src="__STATIC/{$Think.config.template.style}/m/images/qq.png"><p>客服咨询</p></a></li>
-			<li class="am-u-sm-2"><a class="call" href="tel:17353237074" rel="nofollow"> <img src="__STATIC/{$Think.config.template.style}/m/images/call.png"><p>电话咨询</p></a></li>
-            <li class="am-u-sm-2"><a id="weixin" class="call weixin js-modal-open" href="javascript: void(0);" rel="nofollow"> <img src="__STATIC/{$Think.config.template.style}/m/images/weixin.png"><p>微信咨询</p></a></li>
+        	<li class="am-u-sm-2"><a class="call" href="mqqwpa://im/chat?chat_type=wpa&uin=3547038718&version=1&src_type=web&web_src=1314theone.com" rel="nofollow"> <img src="__STATIC__/{$Think.config.template.style}/m/images/qq.png"><p>客服咨询</p></a></li>
+			<li class="am-u-sm-2"><a class="call" href="tel:17353237074" rel="nofollow"> <img src="__STATIC__/{$Think.config.template.style}/m/images/call.png"><p>电话咨询</p></a></li>
+            <li class="am-u-sm-2"><a id="weixin" class="call weixin js-modal-open" href="javascript: void(0);" rel="nofollow"> <img src="__STATIC__/{$Think.config.template.style}/m/images/weixin.png"><p>微信咨询</p></a></li>
             <li class="am-u-sm-6">
-            <form action="http://static.1314theone.com/romantic/cashier/cashier.php?terminal=wap" class="payform" method="post" name="payment" id="payment">
+            <form action="{:url('index/Cashier/index')}" class="payform" method="get" name="payment" id="payment">
             	<input type="hidden" name="title" value="{$data.title}">
 				<input type="hidden" name="litpic" value="{$data.litpic}">
 				<input type="hidden" name="trueprice" value="{$data.addon.trueprice}">

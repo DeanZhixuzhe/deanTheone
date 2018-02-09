@@ -12,7 +12,7 @@
 <div class="body">
 	<div class="breadcrumb"><a href="/">首页</a> > {$data.position}</div>
 	<div class="as_head">
-	<form action="http://static.1314theone.com/romantic/cashier/cashier.php?terminal=pc" class="payform" method="post" target="_blank" name="payment" id="payment">
+	<form action="{:url('index/Cashier/index')}" class="payform" method="get" target="_blank" name="payment" id="payment">
 		<div class="le"><img src="http://img1.1314theone.com{$data.litpic}"></div>
 		<div class="ri">
 			<h1>{$data.title}</h1>
