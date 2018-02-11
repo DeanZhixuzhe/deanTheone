@@ -13,6 +13,10 @@ class IndexController extends BaseController
     function __construct(ApiController $api){
         parent::__construct();
         $this->obj = $api;
+        if ($this->request->isMobile() && strpos($this->request->host(),'m.') === false) {
+            $mwebUrl = (strpos($this->request->url(true),'www.') !== false) ? str_replace('http://www.','http://m.',$this->request->url(true)) : str_replace('http://','http://m.',$this->request->url(true));
+            header('Location: '.$mwebUrl);exit();
+        }
     }
 
     public function index(){

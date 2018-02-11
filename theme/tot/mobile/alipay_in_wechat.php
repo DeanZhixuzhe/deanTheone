@@ -3,7 +3,6 @@
 <head>
 	<title>在浏览器中打开完成支付</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<?php echo $jump; ?>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -24,7 +23,7 @@
 </head>
 <body>
 	<div class="alipay_ext" id="alipay_ext">
-        <img src="/static/images/pay/short-arrow.png" class="jiant">
+        <img src="__STATIC__/{$Think.config.website.view_style}/images/pay/short-arrow.png" class="jiant">
         <ul>
             <?php echo $data; ?>
         </ul>

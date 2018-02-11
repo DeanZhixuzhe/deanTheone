@@ -86,7 +86,7 @@
 		<div class="mok">
 			<h4>商品信息</h4>
 			<div class="shopcon">
-				<img src="{$data.litpic}">
+				<img src="http://img1.1314theone.com{$data.litpic}">
 				<div class="ri">
 					<h2>{$data.title}</h2>
 					<div class="shopyh">{$data.discountsCon}</div>

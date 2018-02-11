@@ -25,6 +25,9 @@ Route::get('about/:dir','index/Index/sgpage',['ext' => 'html',]);
 Route::get('map','index/Index/sgpage');
 Route::get('sitemap','index/Index/sitemap',['ext' => 'xml',]);
 Route::get('romantic/cashier','index/Cashier/index',['ext' => 'html']);
+Route::get('romantic/cashier/pay','index/Cashier/pay');
+// Route::get('romantic/cashier/wxpay','index/Cashier/wxpayAjax');
+// Route::get('romantic/cashier/notice','index/Cashier/notice');
 
 // Route::get('m/:dir/:id','index/index/index',['ext' => 'html']);
 // Route::get('m/:dir1$','index/index/index',['ext' => '']);

@@ -234,7 +234,7 @@
 			<li class="am-u-sm-2"><a class="call" href="tel:17353237074" rel="nofollow"> <img src="__STATIC__/{$Think.config.template.style}/m/images/call.png"><p>电话咨询</p></a></li>
             <li class="am-u-sm-2"><a id="weixin" class="call weixin js-modal-open" href="javascript: void(0);" rel="nofollow"> <img src="__STATIC__/{$Think.config.template.style}/m/images/weixin.png"><p>微信咨询</p></a></li>
             <li class="am-u-sm-6">
-            <form action="{:url('index/Cashier/index')}" class="payform" method="get" name="payment" id="payment">
+            <form action="http://www.1314theone.com{:url('index/Cashier/index')}" class="payform" method="get" name="payment" id="payment">
             	<input type="hidden" name="title" value="{$data.title}">
 				<input type="hidden" name="litpic" value="{$data.litpic}">
 				<input type="hidden" name="trueprice" value="{$data.addon.trueprice}">

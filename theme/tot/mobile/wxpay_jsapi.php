@@ -9,15 +9,15 @@
 	{
 		WeixinJSBridge.invoke(
 			'getBrandWCPayRequest',
-			<?php echo $jsApiParameters; ?>,
+			{$jsApiParameters},
 			function(res){
 				WeixinJSBridge.log(res.err_msg);
 				if (res.err_msg == "get_brand_wcpay_request:ok") {
 					alert("支付成功");
-					window.location.href = "result.php?result=success";
+					window.location.href = "{:url('index/Cashier/notice',['result' => 'success'])}";
 				}else{
 					alert("支付失败");
-					window.location.href = "result.php?result=fail";
+					window.location.href = "{:url('index/Cashier/notice',['result' => 'fail'])}";
 				}
 				// alert(res.err_code+res.err_desc+res.err_msg);
 			}
@@ -52,8 +52,8 @@
 	</style>
 </head>
 <body>
-	<div class="title"><?php echo $subject; ?></div>
-	<div class="jine">￥<?php echo $total_fee; ?>.00</div>
+	<div class="title">{$data.subject}</div>
+	<div class="jine">￥{$data.total_fee}.00</div>
     <div class="maijia"><h4>收款方</h4><p>TheOne浪漫策划公司</p></div>
 	<div class="queren">
 		<span onclick="callpay()" >立即支付</span>

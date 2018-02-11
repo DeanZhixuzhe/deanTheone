@@ -21,21 +21,6 @@ class ApiController extends controller
 	protected $out_trade_no;
 	protected $total_fee;
 
-	// function __construct(){
- //        parent::__construct();
- //        $data = $this->request->param();
- //        dump($data);
- //        if (!isset($data['subject']) || $data['subject'] == null || !isset($data['out_trade_no']) || empty($data['out_trade_no']) || !isset($data['total_fee']) || empty($data['total_fee'])) {
- //        	return false;
- //        }
- //        $this->terminal = isset($data['terminal']) ? $data['terminal'] : 'pc';
- //        dump($this->terminal);
- //        $this->subject = $data['subject'];
- //        $this->body = isset($data['body']) ? $data['body'] : '';
- //        $this->out_trade_no = $data['out_trade_no'];
- //        $this->total_fee = $data['total_fee'];
- //        // dump($this->subject);
- //    }
 	public function wxPay($data){
 		if (!isset($data['subject']) || $data['subject'] == null || !isset($data['out_trade_no']) || empty($data['out_trade_no']) || !isset($data['total_fee']) || empty($data['total_fee'])) {
         	return false;
@@ -50,7 +35,7 @@ class ApiController extends controller
 		$input->SetTime_start(date("YmdHis"));
 		$input->SetTime_expire(date("YmdHis", time() + 600));
 		$input->SetGoods_tag("test");
-		$input->SetNotify_url("http://www.1314theone.com/romantic/extend/wechatPay/example/notify.php");
+		$input->SetNotify_url("http://www.1314theone.com/index/cashier/notify/result/success.html");
 		$input->SetProduct_id("123456789");
 		switch ($data['terminal']) {
 			case 'pc':
@@ -74,54 +59,6 @@ class ApiController extends controller
 		}
 		
 		return $result;
-
-
-		if($input->GetTrade_type() == "NATIVE"){
-			$result = WxPayApi::unifiedOrder($input);
-		}
-		dump($result);
-		$url2 = $result["code_url"];
-
-		$input = new WxPayUnifiedOrder();
-		$input->SetBody($subject);
-		$input->SetAttach($body);
-		$input->SetOut_trade_no($out_trade_no);
-		$input->SetTotal_fee(intval($total_fee)*100);
-		$input->SetTime_start(date("YmdHis"));
-		$input->SetTime_expire(date("YmdHis", time() + 600));
-		$input->SetGoods_tag("test");
-		$input->SetNotify_url("http://www.1314theone.com/romantic/extend/wechatPay/example/notify.php");
-
-		
-		$order = WxPayApi::unifiedOrder($input);
-		if (isset($order['mweb_url']) && !empty($order['mweb_url'])) {
-			$url = $order['mweb_url'];
-			echo "<script language='javascript' type='text/javascript'>";
-			echo "window.location.href='$url'";
-			echo "</script>";
-		}else{
-			echo "<script language='javascript' type='text/javascript'>";
-			echo "window.location.href='result.php?result=fail'";
-			echo "</script>";
-		}
-
-
-		
-		
-		$input = new WxPayUnifiedOrder();
-		$input->SetBody($subject);
-		$input->SetAttach($body);
-		$input->SetOut_trade_no($out_trade_no);
-		$input->SetTotal_fee(intval($total_fee)*100);
-		$input->SetTime_start(date("YmdHis"));
-		$input->SetTime_expire(date("YmdHis", time() + 600));
-		$input->SetGoods_tag("test");
-		$input->SetNotify_url("http://www.1314theone.com/romantic/extend/wechatPay/example/notify.php");
-
-		
-		$order = WxPayApi::unifiedOrder($input);
-
-		
 	}
 
 	public function aliPay($data){

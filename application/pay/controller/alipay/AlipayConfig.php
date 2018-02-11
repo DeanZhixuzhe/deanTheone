@@ -1,5 +1,7 @@
 <?php
 namespace app\pay\controller\alipay;
+
+use think\Request;
 /* *
  * 配置文件
  * 版本：3.4
@@ -32,10 +34,10 @@ class AlipayConfig
 		$alipay_config['key']			= '11pm79wa111updz7r4xlzthocjhwgeco';
 
 		// 服务器异步通知页面路径  需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-		$alipay_config['notify_url'] = "http://www.1314theone.com/romantic/extend/alipayPc/notify_url.php";
+		$alipay_config['notify_url'] = "http://www.1314theone.com/index/cashier/alipaynotify.html";
 
 		// 页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-		$alipay_config['return_url'] = "http://www.1314theone.com/romantic/extend/alipayPc/return_url.php";
+		$alipay_config['return_url'] = "http://www.1314theone.com/index/cashier/alipayreturn.html";
 
 		//签名方式
 		$alipay_config['sign_type']    = strtoupper('MD5');
@@ -52,9 +54,10 @@ class AlipayConfig
 
 		// 支付类型 ，无需修改
 		$alipay_config['payment_type'] = "1";
-				
+		
+		$request = Request::instance();
 		// 产品类型，无需修改
-		$alipay_config['service'] = "create_direct_pay_by_user";
+		$alipay_config['service'] = $request->isMobile() ? "alipay.wap.create.direct.pay.by.user" : "create_direct_pay_by_user";
 
 		//↑↑↑↑↑↑↑↑↑↑请在这里配置您的基本信息↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 

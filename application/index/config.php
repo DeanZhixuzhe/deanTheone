@@ -1,11 +1,17 @@
 <?php
+use think\Request;
+$request = Request::instance();
+$view_style = 'tot';
+$mobile_path = $request->isMobile() ? 'mobile/' : '';
+// use think\Config;
+// $view_path = Config::get('template.style');
 //配置文件
 return [
 	'template'               => [
         // 模板引擎类型 支持 php think 支持扩展
         'type'         => 'Think',
         // 模板路径
-        'view_path'    => './theme/tot/',
+        'view_path'    => ROOT_PATH.'./theme/'.$view_style.DS.$mobile_path,
         // 模板后缀
         'view_suffix'  => 'php',
         // 模板文件名分隔符

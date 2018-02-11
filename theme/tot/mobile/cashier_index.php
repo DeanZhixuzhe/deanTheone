@@ -65,33 +65,33 @@
 </head>
 <body>
     <div id="main">
-        <form action="/romantic/cashier/pay.php" method="get" name="payment" id="payment">
+        <form action="{:url('index/Cashier/pay')}" method="get" name="payment" id="payment">
             <div id="body">
                 <div class="miaoshu">
-                    <img src="/static/images/pay/miaoshu_m.png">
+                    <img src="__STATIC__/{$Think.config.website.view_style}/images/pay/miaoshu_m.png">
                 </div>
                 <div class="jine">
-                    待付金额：￥<input id="WIDtotal_fee" name="WIDtotal_fee" value="<?php echo $trueprice; ?>" readonly="ture"/>
+                    待付金额：￥<input id="WIDtotal_fee" name="total_fee" value="{$data.trueprice}" readonly="ture"/>
                 </div>
                 <div class="ddid">
-                    订单编号：<input id="WIDout_trade_no" name="WIDout_trade_no" value="<?php echo $out_trade_no; ?>" readonly="ture" />
+                    订单编号：<input id="WIDout_trade_no" name="out_trade_no" value="{$data.out_trade_no}" readonly="ture" />
                 </div>
                 <div class="spname">
-                    <input id="WIDsubject" name="WIDsubject" value="<?php echo $title; ?>" readonly="ture"/>
+                    <input id="WIDsubject" name="subject" value="{$data.title}" readonly="ture"/>
                 </div>
                 <dl class="content">
-                    <input id="WIDbody" name="WIDbody" value="" hidden="" readonly="ture" />
-                    <input type="hidden" name="WIDshow_url" value="<?php echo $showurl; ?>">
+                    <input id="WIDbody" name="body" value="" hidden="" readonly="ture" />
+                    <input type="hidden" name="show_url" value="{$Think.request.url}">
                 </dl>
             </div>
             <div class="paymode">
                 <h2>选择支付方式</h2>
-                <label><img src="/static/images/pay/wechat_m.png"><input type="radio" name="pingtai" value="wechat" checked="checked" ></label>
+                <label><img src="__STATIC__/{$Think.config.website.view_style}/images/pay/wechat_m.png"><input type="radio" name="pingtai" value="wechat" checked="checked" ></label>
 			</div>
             <div class="paymode">
                 <h4>更多支付方式</h4>
                 <div class="hide">
-                    <label><img src="/static/images/pay/alipay_m.png"><input type="radio" name="pingtai" value="alipay" ></label>
+                    <label><img src="__STATIC__/{$Think.config.website.view_style}/images/pay/alipay_m.png"><input type="radio" name="pingtai" value="alipay" ></label>
                 </div>
             </div>
             <div id="btn-dd">
